@@ -11,9 +11,9 @@ const PokemonListItem = ({ pokemon }) => {
         styles[`pokemon-${pokemon.type}`]
       } w-[80%] px-10 md:px-0 py-2 my-2 mx-2 md:mx-0 lg:text-xl text-md text-slate-200  flex md:flex-row justify-center items-center rounded-2xl border-slate-200 border-solid border-4`}
     >
-      {pokemon.image && (
+      {pokemon.sprite && (
         <Image
-          src={pokemon.image}
+          src={pokemon.sprite}
           width={50}
           height={50}
           alt="Small image of pokemon"

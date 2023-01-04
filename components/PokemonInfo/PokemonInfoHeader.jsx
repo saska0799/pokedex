@@ -18,6 +18,7 @@ const PokemonInfoHeader = ({ pokemonInfo }) => {
         alt="Image of pokemon"
         width={500}
         height={500}
+        priority
       />
     </div>
   );

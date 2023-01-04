@@ -5,7 +5,7 @@ const Home = () => {
     <>
       <HeadComponent
         title="Pokedex | Home"
-        description="Pokedex home page"
+        desc="Pokedex home page"
         keywords="pokedex, pokemons, pokemon"
       />
       <div className="xl:w-[30%] lg:w-[50%] md:w-[50%] w-[60%] h-[50%] sm:p-10 p-5 m-auto rounded-2xl border-slate-200 border-solid border-4">

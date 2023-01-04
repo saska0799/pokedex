@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import PokemonContext from "../../context/PokemonContext";
 import PokemonListItem from "./PokemonListItem";
 
-const PokemonList = ({ allPokemons, search }) => {
+const PokemonList = ({ search }) => {
+  const { allPokemons } = useContext(PokemonContext);
+
   const searchPokemons = (allPokemons) => {
     return allPokemons.filter((pokemon) =>
       !search || pokemon.name.toString().includes(search) ? true : false
@@ -9,7 +13,7 @@ const PokemonList = ({ allPokemons, search }) => {
   const filteredPokemons = searchPokemons(allPokemons);
 
   return (
-    <div className="w-full md:py-0 py-10 flex md:flex-col justify-start items-center md:overflow-x-hidden overflow-x-scroll">
+    <div className="w-full flex md:flex-col justify-start items-center md:overflow-x-hidden overflow-x-scroll">
       {filteredPokemons.map((pokemon) => (
         <PokemonListItem key={pokemon.id} pokemon={pokemon} search={search} />
       ))}
