@@ -3,7 +3,7 @@ import axios from "axios";
 import PokemonContext from "../../context/PokemonContext";
 import PokemonList from "../PokemonList/PokemonList";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+
 import Input from "./Input";
 
 const Layout = ({ children }) => {
@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <div className="h-[85vh] flex md:flex-row flex-col">
+      <div className="h-[91vh] flex md:flex-row flex-col">
         <div className="md:w-[25%] w-full md:m-h-full md:h-full flex flex-col md:justify-start justify-center items-center">
           <Input
             type="text"
@@ -30,7 +30,6 @@ const Layout = ({ children }) => {
         </div>
         {children}
       </div>
-      <Footer />
     </>
   );
 };

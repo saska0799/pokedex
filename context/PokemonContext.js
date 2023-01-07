@@ -8,7 +8,7 @@ export const PokemonProvider = ({ children }) => {
 
   const getAllPokemons = useCallback(async () => {
     const allPokemonList = await axios
-      .get("https://pokeapi.co/api/v2/pokemon?limit=10000&offset=0")
+      .get("https://pokeapi.co/api/v2/pokemon?limit=10&offset=0")
       .then((data) => {
         const pokemonNameAndUrl = data.data.results;
         return getAllPokemonData(pokemonNameAndUrl);
